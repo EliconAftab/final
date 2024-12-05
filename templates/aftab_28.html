@@ -17,8 +17,13 @@
             background-color: #f0f9ff;
         }
 
+        form {
+            text-align: center; /* Center align content inside the form */
+        }
+
         .dropdown-container {
             position: relative;
+            margin-bottom: 15px; /* Space between dropdown and button */
         }
 
         .dropdown-menu {
@@ -43,6 +48,7 @@
             text-decoration: none;
             color: #333;
             cursor: pointer;
+            text-align: center;
         }
 
         .dropdown-menu a:hover {
@@ -52,6 +58,17 @@
         .selected {
             background-color: #28a745 !important;
             color: white;
+        }
+
+        #button4 {
+            display: inline-block; /* Ensures the button respects alignment */
+            margin: 0 auto; /* Centers the button */
+        }
+
+        @media only screen and (max-width: 550px) {
+            .dropdown-menu {
+                max-width: 300px;
+            }
         }
     </style>
 </head>
@@ -69,7 +86,7 @@
             </div>
         </div>
         <input type="hidden" name="selected_courses" id="selected-courses">
-        <button type="submit" class="btn btn-primary mt-3">View Selected Courses</button>
+        <button type="submit" class="btn btn-primary mt-3" id="button4">View Selected Courses</button>
     </form>
 
     <script>
