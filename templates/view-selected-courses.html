@@ -106,6 +106,13 @@
                         endif %}
                         {% endfor %}
                     </td>
+                    <td>
+                        {% for i in courses_df_e2["Course Name"] %}
+                        {% if i in selected_courses_array %}
+                        {{ i }} <br>Loc: {{courses_df_e2[courses_df_e2["Course Name"]==i]["Lecture Location"].values[0]}}{%
+                        endif %}
+                        {% endfor %}
+                    </td>
                 </tr>
                 <tr>
                     <th> 11:30 AM - 12:50 AM</th>
