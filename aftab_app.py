@@ -3,7 +3,7 @@ import pandas as pd
 import openpyxl
 # Read Excel data
 courses_df = pd.read_excel("templates/Timetable 2024-25, Sem-II (1).xlsx")
-courses_df_1=courses_df[(courses_df.index>12) & (courses_df.index<44) | (courses_df.index>=189) & (courses_df.index<225)]
+courses_df_1=courses_df[(courses_df.index>12) & (courses_df.index<44) | (courses_df.index>=191) & (courses_df.index<225)]
 courses_df_2=courses_df[(courses_df.index<13)]
 courses_df_a1 = pd.read_excel("templates/Timetable 2024-25, Sem-II (1).xlsx")
 courses_df_c1 = pd.read_excel("templates/Timetable 2024-25, Sem-II (1).xlsx")
@@ -427,7 +427,6 @@ def aftab_28():
 @app.route('/view-selected-courses', methods=['GET'])
 def view_selected_courses():
     selected_courses_array = []
-    global monday_courses
     # Get selected courses from the request
     selected_courses = request.args.get('selected_courses')
     if selected_courses:
